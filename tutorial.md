@@ -91,7 +91,7 @@ The logic is as follows:
 
 - The program reads the command.
 - If the command is from the handler list, it is executed.
-- If the command is not from the handler list, the program specified that it is an unknown command and suggests that the user type 'help' to see a list of existing commands.
+- If the command is not from the handler list, the program specifies that it is an unknown command and suggests that the user type 'help' to see a list of existing commands.
 
 To execute this logic, write the following code:
 
@@ -116,6 +116,13 @@ def start(self):
 
 		print("Goodbye!")
 ```
+The start function also allows the user to type 'exit' to leave the program, as you can see in the final line.
+
+---
+
+## Login
+
+![start](images/def-login.png)
 
 
 # How-to Use Application
