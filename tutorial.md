@@ -41,9 +41,10 @@ class ExpensesApp(object):
 
 ## Start
 
+
 ## Handlers
 
-The application will have the following functionality. Below are detailed instructions for each function.
+The application will have the following commands. 
 
 - Login
 - Logout
@@ -53,6 +54,32 @@ The application will have the following functionality. Below are detailed instru
 - Clear
 - Help
 - Exit
+
+To create the handlers that will initiate these commands in the program, write the following code in the class Expenses(App). Make sure to include the correct indentation, as specified in section one on setting up the environment:
+
+```
+def __init__(self):
+		self._commands = {
+			"login": self._cmd_log_in,
+			"logout": self._cmd_log_out,
+			"add": self._cmd_add_expense,
+			"list": self._cmd_list_expenses,
+			"search": self._cmd_search_expenses,
+			"clear": self._cmd_clear,
+			"help": self._cmd_list_commands,
+			"exit": self._cmd_exit,
+		}
+
+		# Expenses database
+		self._db = []
+
+		# Current username
+		self._username = None
+
+		# Exit flag
+		self._exit = False
+
+```
 
 
 # How-to Use Application
