@@ -176,6 +176,48 @@ def _cmd_log_out(self):
 
 ```
 
+## Add
+
+This allows the user to add an expense. It takes two arguments, the name and the amount.
+
+![addexpense](images/def_add_expense.png)
+
+- Firstly, the program checks if the user is logged in using the _is_logged_in function defined earlier.
+- If the user is not logged in, the user is told 'You must login first'.
+- If the user is logged in, they can add a <name> and <amount>, then hit enter. This adds the data to the database.
+- Once the user hits enter, they get a confirmation message - 'Added new expense'.
+- If there are any errors, the program prints the usage.
+
+Below is the code for this function:
+
+```
+def _cmd_add_expense(self, name=None, amount=None, *args):
+		"""
+			Adds an expense for the logged in user
+		"""
+		if not self._is_logged_in():
+			print("You must log in first.")
+			return
+
+		try:
+			f_amount = float(amount)
+
+			# Add expense to the database
+			self._db.append({
+				"name": name,
+				"amount": f_amount,
+				"username": self._username,
+			})
+			print("Added new expense.")
+		except Exception as e:
+			# If there was an exception, print usage
+			print("usage: add <name> <amount> [<group>]")
+
+```
+
+
+
+
 
 
 
