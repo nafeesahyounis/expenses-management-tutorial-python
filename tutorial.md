@@ -27,7 +27,7 @@
 
 # How-to Build Application
 
-##Setup
+## Setup
 
 Firstly, you will need to import your operating system with the following code:
 
@@ -145,6 +145,42 @@ def _cmd_log_in(self, username=None, *args):
 		self._username = username
 		print("Logged in as {}".format(username))
 ```
+
+## Login check
+
+This function is necessary to check whether the user is logged in when using other commands that require login.
+
+It will be referenced in other functions. It is therefore important for the smooth running of the program.
+
+The code for this function is as follows:
+
+```
+def _is_logged_in(self):
+		"""
+			Returns True if user is logged in
+		"""
+		return self._username is not None
+
+```
+
+## Logout
+
+This logs out the user, and prints a confirmation message to tell the user he/she has successfully logged out.
+
+```
+def _cmd_log_out(self):
+		"""
+			Logs out user
+		"""
+		print("User logged out")
+
+```
+
+
+
+
+
+
 
 
 # How-to Use Application
