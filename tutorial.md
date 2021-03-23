@@ -83,9 +83,39 @@ def __init__(self):
 
 ## Start
 
+Below is a diagram that outlines the flow of the program.
+
 ![start](images/def-start.png)
 
+The logic is as follows:
 
+- The program reads the command.
+- If the command is from the handler list, it is executed.
+- If the command is not from the handler list, the program specified that it is an unknown command and suggests that the user type 'help' to see a list of existing commands.
+
+To execute this logic, write the following code:
+
+```
+def start(self):
+
+		while not self._exit:
+			# Read command and agruments from the user input
+			user_input = input("cmd> ")
+			try:
+				command, *args = user_input.split()
+			except:
+				continue
+
+			# React to an unknown command
+			if command not in self._commands:
+				print("Unknown command {} (type 'help' for the list of commands)".format(command))
+				continue
+
+			# Run command
+			self._commands[command](*args)
+
+		print("Goodbye!")
+```
 
 
 # How-to Use Application
