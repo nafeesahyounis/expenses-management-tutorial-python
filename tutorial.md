@@ -81,5 +81,11 @@ def __init__(self):
 
 ```
 
+## Start
+
+![start](images/def_start.png)
+
+
+
 
 # How-to Use Application
