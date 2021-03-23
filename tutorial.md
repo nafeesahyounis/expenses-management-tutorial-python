@@ -5,6 +5,7 @@
         - [Business Goals](#business-goals)
         - [Solo Traveller Handbook Goals](#solo-traveller-handbook-goals)
 2. [How to build application](#how-to-build-application)
+    - [Setup](#setup)
     - [Handlers](#handlers)
     - [Start](#start)
     - [Login](#login)
@@ -26,6 +27,8 @@
 
 # How-to Build Application
 
+##Setup
+
 Firstly, you will need to import your operating system with the following code:
 
 ```
@@ -38,8 +41,6 @@ Next, you must define the class. This will contain all the functions you will la
 class ExpensesApp(object):
 
 ```
-
-## Start
 
 
 ## Handlers
@@ -83,7 +84,7 @@ def __init__(self):
 
 ## Start
 
-Below is a diagram that outlines the flow of the program.
+Below is a diagram that outlines the main program loop.
 
 ![start](images/def-start.png)
 
@@ -91,9 +92,9 @@ The logic is as follows:
 
 - The program reads the command.
 - If the command is from the handler list, it is executed.
-- If the command is not from the handler list, the program specifies that it is an unknown command and suggests that the user type 'help' to see a list of existing commands.
+- If the command is not from the handler list, the program specifies that it is an unknown command. It then suggests that the user type 'help' to see a list of existing commands.
 
-To execute this logic, write the following code:
+To execute this loop, write the following code:
 
 ```
 def start(self):
@@ -116,13 +117,34 @@ def start(self):
 
 		print("Goodbye!")
 ```
-The start function also allows the user to type 'exit' to leave the program, as you can see in the final line.
+The start function also allows the user to type 'exit' to leave the program.
 
 ---
 
 ## Login
 
-![start](images/def-login.png)
+To use other expense management commands, the user must login. This is the flow for logging in:
+
+![login](images/def_login.png)
+
+The program checks the inputted name, and prints a confirmation message.
+
+If nothing is entered, it prints the usage.
+
+The following code is needed for the login:
+
+```
+def _cmd_log_in(self, username=None, *args):
+		"""
+			Log in command.
+			Prerequisite to other expenses management commands
+		"""
+		if username is None:
+			print("usage: login <name>")
+			return
+		self._username = username
+		print("Logged in as {}".format(username))
+```
 
 
 # How-to Use Application
