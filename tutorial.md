@@ -397,6 +397,30 @@ This will return a login success message.
 
 Now you can proceed to use more complex commands.
 
+## Add
+
+The add command adds expenses to the database. If you type add, the program will show you the usage:
+
+![addusage](images/screenshots/add_usage.png)
+
+To use the add command, you therefore need to type 'add' and then follow it by a 'name' and 'amount' separated by a space.
+
+Once you hit enter, you will receive a success message.
+
+![addcommand](images/screenshots/add_command.png)
+
+## List
+
+To see all items added to the database by the user that is logged in, you use the list command. You simply need to type list, and it will display all entries. If there are no entries, it will display an empty name and amount header.
+
+![addcommand](images/screenshots/list_command.png)
+
+
+
+
+
+
+
 
 
 
