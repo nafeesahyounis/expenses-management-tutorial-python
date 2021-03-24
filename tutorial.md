@@ -214,6 +214,20 @@ def _cmd_add_expense(self, name=None, amount=None, *args):
 			print("usage: add <name> <amount> [<group>]")
 
 ```
+## Search
+
+This takes a name as an input value. It then for this 'name' in the expenses of the logged in user. 
+
+![searchexpense](images/def_search_expense.png)
+
+- Firstly, the program checks if the user is logged in using the _is_logged_in function defined earlier.
+- Next it checks the user input.
+- If user input isn't in the database, it prints the empty rows 'name' and 'amount'.
+- Then, it skips other user rows and only focuses on the logged in user.
+- It skips all rows that don't contain the name that was inputted from the particular user.
+- Once it has found the 'name' (or 'name's) that match with the input, it prints them all under the headers 'name' and 'amount'.
+- If there are any errors, the program prints the usage.
+
 
 
 
