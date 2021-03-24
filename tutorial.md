@@ -359,7 +359,17 @@ def _cmd_exit(self):
 
 ```
 
+## Initialise App
 
+The final step is to initialise the application. This is placed at the **bottom** of the file, and **outside** of the class ExpensesApp.
+
+Like so:
+
+```
+if __name__ == '__main__':
+	app = ExpensesApp()
+	app.start()
+```
 
 
 
