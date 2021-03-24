@@ -273,6 +273,56 @@ def _cmd_search_expenses(self, searchstring=None, *args):
 
 ## List
 
+This command lists all the expenses of the logged in user.
+
+![listexpense](images/def_list_expense.png)
+
+- Firstly, the program checks if the user is logged in using the _is_logged_in function defined earlier.
+- Then the program prints the headers 'name' and 'amount'.
+- Next the program checks the rows that match the username. 
+- If a row doesn't match the username, it skips it.
+- Finally it prints the rows that match the username under the headers.
+- If there are any errors, the program prints the usage.
+
+The code for this is as follows:
+
+```
+def _cmd_list_expenses(self, *args):
+		"""
+			Displays expenses of the logged in user
+		"""
+
+		if not self._is_logged_in():
+			print("You must log in first.")
+			return
+
+		try:
+			# Display header
+			print("name\tamount")
+
+			# Display rows
+			for row in self._db:
+				# Skip other users' rows
+				if row["username"] != self._username:
+					continue
+
+				# Print the row
+				print("{}\t{}".format(
+					row["name"],
+					row["amount"],
+				))
+		except:
+			# If there was an exception, print usage
+			print("usage: list")
+
+```
+
+## Clear
+
+
+## Help
+
+## Exit
 
 
 
