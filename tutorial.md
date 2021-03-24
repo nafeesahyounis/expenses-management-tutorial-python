@@ -1,3 +1,9 @@
+# Introduction
+
+The following is a tutorial for an expenses management application that can be run in the terminal. This program is written in Python and aimed at beginners with minimum technical skills.
+
+This tutorial comprises of the following three sections:
+
 ## Table of Contents
 1. [How-to Setup Environment](#how-to-setup-environment)
 2. [How to build application](#how-to-build-application)
