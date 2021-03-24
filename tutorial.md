@@ -381,6 +381,27 @@ After you have typed the help command, hit enter. The program will print a list 
 
 The following section will demonstrate how each of these commands can be used.
 
+## Login
+
+To use the search, list and add command, it is necessary to be logged in. Not being logged in returns a login error message:
+
+![notloggedin](images/screenshots/not_logged_in.png)
+
+To login, type the login command followed by your username.
+
+![loginuser](images/screenshots/login_user.png)
+
+This will return a login success message.
+
+![loginsuccess](images/screenshots/login_success.png)
+
+Now you can proceed to use more complex commands.
+
+
+
+
+
+
 
 
 
