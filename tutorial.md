@@ -415,6 +415,30 @@ To see all items added to the database by the user that is logged in, you use th
 
 ![addcommand](images/screenshots/list_command.png)
 
+## Search
+
+The search command allows you to search for all entries with the same name. You must type the command, followed by the name and hit enter. It will then display all the entries for you in a list.
+
+![search_command](images/screenshots/search_command.png)
+
+## Clear
+
+The clear command will clear the terminal.
+
+## Logout
+
+The logout command logs you out of your current user. This way you can login as a new user and add different expenses.
+
+![logoutcommand](images/screenshots/logout_command.png)
+
+## Exit
+
+Using this command you exit the program entirely.
+
+![exitcommand](images/screenshots/exit_command.png)
+
+
+
 
 
 
