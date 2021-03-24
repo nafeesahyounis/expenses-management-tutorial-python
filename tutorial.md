@@ -17,6 +17,11 @@
 
 # How-to Setup Environment
 
+To build and use this application, you will need to have Python installed. You will also need an IDE either locally or online interpreter.
+
+Here is a guide on how to install Python: [Guide](https://realpython.com/installing-python/) 
+
+
 # How-to Build Application
 
 ## Setup
@@ -78,7 +83,7 @@ def __init__(self):
 
 Below is a diagram that outlines the main program loop.
 
-![start](images/def-start.png)
+![start](images/flowchart/def-start.png)
 
 The logic is as follows:
 
