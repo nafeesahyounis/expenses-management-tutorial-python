@@ -13,7 +13,7 @@
     - [Help](#help)
     - [Exit](#exit)
     - [Initialise App](#initialise-app)
-3. [How to Use Application](#information-architecture)
+3. [How to Use Application](#how-to-use-application)
 
 # How-to Setup Environment
 
