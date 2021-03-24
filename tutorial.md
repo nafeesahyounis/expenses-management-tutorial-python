@@ -1,9 +1,5 @@
 ## Table of Contents
 1. [How-to Setup Environment](#how-to-setup-environment)
-    - [Goals](#goals)
-        - [Visitor Goals](#visitor-goals)
-        - [Business Goals](#business-goals)
-        - [Solo Traveller Handbook Goals](#solo-traveller-handbook-goals)
 2. [How to build application](#how-to-build-application)
     - [Setup](#setup)
     - [Handlers](#handlers)
@@ -16,11 +12,7 @@
     - [Clear](#clear)
     - [Help](#help)
     - [Exit](#exit)
-
-
-
-
-
+    - [Initialise App](#initialise-app)
 3. [How to Use Application](#information-architecture)
 
 # How-to Setup Environment
@@ -125,7 +117,7 @@ The start function also allows the user to type 'exit' to leave the program.
 
 To use other expense management commands, the user must login. This is the flow for logging in:
 
-![login](images/def_login.png)
+![login](images/flowchart/def_login.png)
 
 The program checks the inputted name, and prints a confirmation message.
 
@@ -180,7 +172,7 @@ def _cmd_log_out(self):
 
 This allows the user to add an expense. It takes two arguments, the name and the amount.
 
-![addexpense](images/def_add_expense.png)
+![addexpense](images/flowchart/def_add_expense.png)
 
 - Firstly, the program checks if the user is logged in using the _is_logged_in function defined earlier.
 - If the user is not logged in, the user is told 'You must login first'.
@@ -218,7 +210,7 @@ def _cmd_add_expense(self, name=None, amount=None, *args):
 
 This searches for the expenses of the logged in user by name. 
 
-![searchexpense](images/def_search_expense.png)
+![searchexpense](images/flowchart/def_search_expense.png)
 
 - Firstly, the program checks if the user is logged in using the _is_logged_in function defined earlier.
 - Next it checks the user input.
@@ -275,7 +267,7 @@ def _cmd_search_expenses(self, searchstring=None, *args):
 
 This command lists all the expenses of the logged in user.
 
-![listexpense](images/def_list_expense.png)
+![listexpense](images/flowchart/def_list_expense.png)
 
 - Firstly, the program checks if the user is logged in using the _is_logged_in function defined earlier.
 - Then the program prints the headers 'name' and 'amount'.
@@ -373,12 +365,22 @@ if __name__ == '__main__':
 
 
 
-
-
-
-
-
-
-
-
 # How-to Use Application
+
+To use the application, first you need to run python in the terminal:
+
+![runpython](images/screenshots/initialise_python.png)
+
+You will then get prompted for a command. Type one of the commands from the list specified in the how to build section. For example:
+
+![helpcommand](images/screenshots/help_command.png)
+
+After you have typed the help command, hit enter. The program will print a list of all the commands you can use.
+
+![listofcommands](images/screenshots/list_of_commands.png)
+
+The following section will demonstrate how each of these commands can be used.
+
+
+
+
