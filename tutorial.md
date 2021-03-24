@@ -319,10 +319,47 @@ def _cmd_list_expenses(self, *args):
 
 ## Clear
 
+This command clears the screen, and is written like so:
+
+```
+def _cmd_clear(self):
+		"""
+			Clears the screen
+		"""
+		system('clear')
+```
+
+
 
 ## Help
 
+The help command lists all the commands for the user, in case they need a reminder about functionality.
+
+Here is the code for this:
+
+```
+def _cmd_list_commands(self):
+		"""
+			Prints all avaliable commands
+		"""
+		for command in self._commands:
+			print(command)
+```
+
 ## Exit
+
+The exit command allows the user to exit the program. There is an initial exit flag that is set to False when the program is initialised (see handlers). This command sets it to True.
+
+```
+def _cmd_exit(self):
+		"""
+			Sets the exit flag to true
+		"""
+		self._exit = True
+
+```
+
+
 
 
 
