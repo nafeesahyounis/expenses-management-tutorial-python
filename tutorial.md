@@ -216,7 +216,7 @@ def _cmd_add_expense(self, name=None, amount=None, *args):
 ```
 ## Search
 
-This takes a name as an input value. It then for this 'name' in the expenses of the logged in user. 
+This searches for the expenses of the logged in user by name. 
 
 ![searchexpense](images/def_search_expense.png)
 
@@ -227,6 +227,51 @@ This takes a name as an input value. It then for this 'name' in the expenses of 
 - It skips all rows that don't contain the name that was inputted from the particular user.
 - Once it has found the 'name' (or 'name's) that match with the input, it prints them all under the headers 'name' and 'amount'.
 - If there are any errors, the program prints the usage.
+
+The following is the code needed to implement this command:
+
+```
+def _cmd_search_expenses(self, searchstring=None, *args):
+		"""
+			Searches expenses of the logged in user by their name
+		"""
+
+		if not self._is_logged_in():
+			print("You must log in first.")
+			return
+
+		try:
+			# Validate arguments
+			if not isinstance(searchstring, str):
+				raise
+
+			# Display header
+			print("name\tamount")
+
+			# Display rows
+			for row in self._db:
+				# Skip other users' rows
+				if row["username"] != self._username:
+					continue
+
+				# Skip records that don't contain the searchstring
+				if searchstring not in row["name"]:
+					continue
+
+				# Print the row
+				print("{}\t{}".format(
+					row["name"],
+					row["amount"],
+				))
+		except:
+			# If there was an exception, print usage
+			print("usage: search <searchstring>")
+
+	
+```
+
+
+## List
 
 
 
